@@ -1,0 +1,30 @@
+Ces photos ont été récupérées automatiquement depuis votre compte Instagram
+public @under_water_hunting (résolution ~640x640, taille d'aperçu Instagram).
+
+Utilisation actuelle dans index.html :
+- profile.jpg    -> avatar rond dans la section Instagram
+- gallery-2.jpg  -> photo de la section "Mon histoire"
+- gallery-1.jpg  -> grande vignette de la galerie
+- gallery-3.jpg à gallery-7.jpg -> les 5 autres vignettes de la galerie
+
+Pour améliorer la qualité :
+- Ces images sont des aperçus Instagram (compressés). Pour un rendu plus net,
+  remplacez-les par les fichiers originaux depuis votre pellicule/téléphone
+  (gardez les mêmes noms de fichiers, ou mettez à jour les balises <img> dans index.html).
+- Ratio conseillé : carré ou 4:3 pour la galerie, portrait (4:5) pour la photo d'histoire.
+- Compressez vos photos (tinypng.com ou squoosh.app) avant de les ajouter,
+  pour que le site reste rapide à charger.
+
+Pour changer une photo précise, il suffit de remplacer le fichier correspondant
+dans ce dossier en gardant le même nom.
+
+--- Vidéos (video-1-thumb.jpg, video-2-thumb.jpg) ---
+YouTube renvoie l'erreur 153 pour vos 2 vidéos car l'intégration ("embedding")
+est désactivée sur YouTube Studio pour ces vidéos. En attendant, le site affiche
+la miniature officielle YouTube avec un bouton play : un clic ouvre la vidéo
+dans un nouvel onglet YouTube (aucune lecture cassée, rendu propre).
+
+Si vous voulez la lecture directement sur le site plus tard :
+1. YouTube Studio > Contenu > ouvrez la vidéo > Détails > "Plus d'options"
+2. Cochez "Autoriser l'intégration"
+3. Recontactez pour remettre le lecteur intégré (<iframe>) à la place des vignettes.
