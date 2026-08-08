@@ -17,8 +17,8 @@
   --mist-2:rgba(244,239,228,.4);
   --radius:4px;
   --ease:cubic-bezier(.22,1,.36,1);
-  --serif:'Fraunces',Georgia,'Times New Roman',serif;
-  --sans:'Inter',system-ui,sans-serif;
+  --serif:'Bodoni Moda',Georgia,'Times New Roman',serif;
+  --sans:'Archivo',system-ui,sans-serif;
   --mono:ui-monospace,'SF Mono','Cascadia Mono','JetBrains Mono',Consolas,monospace;
 }
 
