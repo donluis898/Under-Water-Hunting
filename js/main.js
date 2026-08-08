@@ -27,18 +27,56 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 revealEls.forEach(el => observer.observe(el));
 
-// ===== Bubbles =====
-const bubbleContainer = document.getElementById('bubbles');
-const BUBBLE_COUNT = 22;
-for (let i = 0; i < BUBBLE_COUNT; i++) {
-  const b = document.createElement('span');
-  const size = 3 + Math.random() * 10;
-  b.style.setProperty('--s', `${size}px`);
-  b.style.setProperty('--x', `${Math.random() * 100}%`);
-  b.style.setProperty('--d', `${8 + Math.random() * 12}s`);
-  b.style.setProperty('--delay', `${Math.random() * 12}s`);
-  bubbleContainer.appendChild(b);
+// ===== Hero parallax =====
+const heroImg = document.getElementById('heroImg');
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (ticking) return;
+  ticking = true;
+  requestAnimationFrame(() => {
+    const y = window.scrollY;
+    if (y < window.innerHeight) {
+      heroImg.style.transform = `scale(1.08) translateY(${y * 0.12}px)`;
+    }
+    ticking = false;
+  });
+}, { passive: true });
+
+// ===== Galerie: lightbox =====
+const galleryTiles = Array.from(document.querySelectorAll('.gallery__tile'));
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+const lightboxPrev = document.getElementById('lightboxPrev');
+const lightboxNext = document.getElementById('lightboxNext');
+let currentIndex = 0;
+
+function openLightbox(index) {
+  currentIndex = (index + galleryTiles.length) % galleryTiles.length;
+  const src = galleryTiles[currentIndex].dataset.full;
+  lightboxImg.src = src;
+  lightboxImg.alt = galleryTiles[currentIndex].querySelector('img').alt;
+  lightbox.classList.add('is-visible');
 }
+function closeLightbox() {
+  lightbox.classList.remove('is-visible');
+}
+
+galleryTiles.forEach((tile, i) => {
+  tile.addEventListener('click', () => openLightbox(i));
+});
+lightboxClose.addEventListener('click', closeLightbox);
+lightboxPrev.addEventListener('click', () => openLightbox(currentIndex - 1));
+lightboxNext.addEventListener('click', () => openLightbox(currentIndex + 1));
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('is-visible')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') openLightbox(currentIndex - 1);
+  if (e.key === 'ArrowRight') openLightbox(currentIndex + 1);
+});
 
 // ===== Footer year =====
 document.getElementById('year').textContent = new Date().getFullYear();

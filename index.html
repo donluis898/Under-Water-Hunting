@@ -8,15 +8,17 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐟</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<div class="grain"></div>
+
 <!-- ===== NAVIGATION ===== -->
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a href="#" class="nav__logo">UNDERWATER <span>HUNTING</span></a>
+    <a href="#" class="wordmark"><em>Underwater</em><b>HUNTING</b></a>
     <nav class="nav__links" id="navLinks">
       <a href="#histoire">L'histoire</a>
       <a href="#videos">Vidéos</a>
@@ -32,40 +34,34 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <div class="hero__ocean">
-    <div class="hero__rays"></div>
-    <div class="bubbles" id="bubbles"></div>
+  <div class="hero__media">
+    <img src="images/gallery-2.jpg" alt="Retour de chasse sous-marine au coucher du soleil sur une plage bretonne" class="hero__img" id="heroImg">
+    <div class="hero__scrim"></div>
   </div>
   <div class="hero__content">
-    <p class="hero__kicker">Apnée · Atlantique · Bretagne</p>
-    <h1 class="hero__title">UNDERWATER<br>HUNTING</h1>
-    <p class="hero__tagline">Chasse sous-marine en apnée. Une plongée dans l'océan,<br>guidée par la patience et le respect de la ressource.</p>
+    <p class="kicker">Apnée — Atlantique — Bretagne</p>
+    <h1 class="hero__title"><em>Underwater</em><b>HUNTING</b></h1>
+    <p class="hero__tagline">Chasse sous-marine en apnée. Une plongée dans l'océan, guidée par la patience et le respect de la ressource.</p>
     <div class="hero__cta">
       <a href="#histoire" class="btn btn--primary">Découvrir l'histoire</a>
       <a href="#videos" class="btn btn--ghost">Voir les vidéos</a>
     </div>
   </div>
-  <a href="#histoire" class="hero__scroll" aria-label="Défiler vers le bas">
-    <span></span>
-  </a>
+  <a href="#histoire" class="hero__scroll" aria-label="Défiler vers le bas">Scroll</a>
 </section>
-
-<div class="wave-divider"><svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0,40 C300,90 900,-10 1200,40 L1200,80 L0,80 Z"></path></svg></div>
 
 <!-- ===== HISTOIRE / PASSION ===== -->
 <section class="story" id="histoire">
   <div class="story__inner">
     <div class="story__media" data-reveal>
-      <div class="photo-frame">
-        <img src="images/gallery-2.jpg" alt="Sortie de chasse sous-marine, Underwater Hunting" class="story__img" loading="lazy">
-      </div>
+      <img src="images/gallery-5.jpg" alt="Portrait sur la côte rocheuse bretonne avec un bar tenu en main" loading="lazy">
     </div>
     <div class="story__text" data-reveal>
-      <p class="section-kicker">Mon histoire</p>
-      <h2 class="section-title">Une passion née en apnée</h2>
+      <p class="kicker">Mon histoire</p>
+      <h2 class="display-title">Une passion née en apnée</h2>
       <p>Tout a commencé au large des côtes bretonnes, un masque sur le visage et un fusil à la main, dans une eau froide qui ne pardonne rien. La chasse sous-marine, ce n'est pas seulement traquer un poisson : c'est apprendre à retenir son souffle, à lire les courants, les marées et les postes où la vie sous-marine se cache.</p>
-      <p>Entre Belle-Île et le Morbihan, chaque sortie est une nouvelle histoire. Certaines finissent bredouilles, d'autres se terminent avec un bar de plus de 6 kg remonté après de longues minutes d'affût. Mais dans tous les cas, c'est le même émerveillement : celui d'évoluer, en apnée, dans un monde qui n'est pas le nôtre.</p>
-      <p>Ce site est né de l'envie de partager cette passion — les images, les prises, et surtout le respect que cette pratique impose face à l'océan.</p>
+      <p class="pull-quote">« Le même émerveillement à chaque sortie : évoluer, en apnée, dans un monde qui n'est pas le nôtre. »</p>
+      <p>Entre Belle-Île et le Morbihan, chaque sortie est une nouvelle histoire. Certaines finissent bredouilles, d'autres se terminent avec un bar de plus de 6 kg remonté après de longues minutes d'affût. Ce site est né de l'envie de partager cette passion — les images, les prises, et surtout le respect que cette pratique impose face à l'océan.</p>
       <div class="story__stats">
         <div class="stat"><span class="stat__num">6 kg+</span><span class="stat__label">Bar remonté en apnée</span></div>
         <div class="stat"><span class="stat__num">100%</span><span class="stat__label">Apnée, sans bouteille</span></div>
@@ -75,40 +71,47 @@
   </div>
 </section>
 
-<div class="wave-divider wave-divider--flip"><svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0,40 C300,90 900,-10 1200,40 L1200,80 L0,80 Z"></path></svg></div>
-
-<!-- ===== VALEURS ===== -->
-<section class="values">
-  <div class="values__inner">
-    <div class="value" data-reveal>
-      <svg viewBox="0 0 24 24"><path d="M12 3l1.5 3.5L17 8l-3.5 1.5L12 13l-1.5-3.5L7 8l3.5-1.5L12 3z"/><path d="M4 15l.8 1.8L6.6 17.6 4.8 18.4 4 20.2l-.8-1.8L1.4 17.6l1.8-.8L4 15z"/><path d="M19 14l.9 2 2 .9-2 .9-.9 2-.9-2-2-.9 2-.9.9-2z"/></svg>
-      <h3>Apnée pure</h3>
-      <p>Aucune assistance en profondeur : le corps, le souffle, et l'océan.</p>
-    </div>
-    <div class="value" data-reveal>
-      <svg viewBox="0 0 24 24"><path d="M12 2C6 6 4 10 4 14a8 8 0 0016 0c0-4-2-8-8-12z"/></svg>
-      <h3>Respect de la ressource</h3>
-      <p>Tailles légales, saisons de reproduction, prélèvement raisonné.</p>
-    </div>
-    <div class="value" data-reveal>
-      <svg viewBox="0 0 24 24"><path d="M3 12c2-4 6-7 9-7s7 3 9 7c-2 4-6 7-9 7s-7-3-9-7z"/><circle cx="12" cy="12" r="2.5"/></svg>
-      <h3>Observation</h3>
-      <p>Connaître le milieu avant de chasser : marées, courants, postes.</p>
-    </div>
-    <div class="value" data-reveal>
-      <svg viewBox="0 0 24 24"><path d="M12 21s-8-4.5-8-11a5 5 0 0110-1 5 5 0 0110 1c0 6.5-8 11-8 11z"/></svg>
-      <h3>Transmission</h3>
-      <p>Partager cette passion avec ceux qui aiment l'océan et le respectent.</p>
-    </div>
+<!-- ===== ÉTHIQUE ===== -->
+<section class="ethics" id="ethique">
+  <div class="section-head" data-reveal>
+    <p class="kicker">Ma philosophie</p>
+    <h2 class="display-title">Chasser avec respect</h2>
   </div>
+  <ol class="ethics__list">
+    <li data-reveal>
+      <span class="ethics__num">01</span>
+      <div><h3>Apnée pure</h3><p>Aucune assistance en profondeur : le corps, le souffle, et l'océan. Rien d'autre.</p></div>
+    </li>
+    <li data-reveal>
+      <span class="ethics__num">02</span>
+      <div><h3>Respect de la ressource</h3><p>Tailles légales, saisons de reproduction, prélèvement raisonné — jamais plus que nécessaire.</p></div>
+    </li>
+    <li data-reveal>
+      <span class="ethics__num">03</span>
+      <div><h3>Observation avant tout</h3><p>Connaître le milieu avant de chasser : marées, courants, postes, comportement du poisson.</p></div>
+    </li>
+    <li data-reveal>
+      <span class="ethics__num">04</span>
+      <div><h3>Transmission</h3><p>Partager cette passion avec ceux qui aiment l'océan et qui le respectent autant que moi.</p></div>
+    </li>
+  </ol>
+</section>
+
+<!-- ===== RUPTURE / CITATION ===== -->
+<section class="quote-break" style="background-image:url('images/gallery-1.jpg')">
+  <div class="quote-break__scrim"></div>
+  <blockquote data-reveal>
+    « La chasse sous-marine commence bien avant d'apercevoir le poisson — elle commence dès qu'on retient son souffle. »
+    <span>Underwater Hunting</span>
+  </blockquote>
 </section>
 
 <!-- ===== VIDEOS ===== -->
 <section class="videos" id="videos">
-  <div class="section-head" data-reveal>
-    <p class="section-kicker">En immersion</p>
-    <h2 class="section-title">Les vidéos</h2>
-    <p class="section-sub">Quelques sorties filmées, entre l'Atlantique et les côtes bretonnes.</p>
+  <div class="section-head section-head--center" data-reveal>
+    <p class="kicker">En immersion</p>
+    <h2 class="display-title">Les vidéos</h2>
+    <p class="section-sub" style="margin-inline:auto">Quelques sorties filmées, entre l'Atlantique et les côtes bretonnes.</p>
   </div>
   <div class="videos__grid">
     <a class="video-card" data-reveal href="https://www.youtube.com/watch?v=wqY4R28H250" target="_blank" rel="noopener">
@@ -133,22 +136,20 @@
   </div>
 </section>
 
-<div class="wave-divider"><svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0,40 C300,90 900,-10 1200,40 L1200,80 L0,80 Z"></path></svg></div>
-
 <!-- ===== GALERIE ===== -->
 <section class="gallery" id="galerie">
   <div class="section-head" data-reveal>
-    <p class="section-kicker">Souvenirs de chasse</p>
-    <h2 class="section-title">Galerie</h2>
-    <p class="section-sub">Les plus belles prises et images d'apnée. Remplacez ces vignettes par vos photos dans /images.</p>
+    <p class="kicker">Souvenirs de chasse</p>
+    <h2 class="display-title">Galerie</h2>
+    <p class="section-sub">Les plus belles prises et images d'apnée — cliquez pour agrandir.</p>
   </div>
-  <div class="gallery__grid">
-    <div class="gallery__tile gallery__tile--big" data-reveal><img src="images/gallery-1.jpg" alt="Prise de chasse sous-marine" loading="lazy"></div>
-    <div class="gallery__tile" data-reveal><img src="images/gallery-3.jpg" alt="Chasse sous-marine en apnée" loading="lazy"></div>
-    <div class="gallery__tile" data-reveal><img src="images/gallery-4.jpg" alt="Chasse sous-marine en apnée" loading="lazy"></div>
-    <div class="gallery__tile" data-reveal><img src="images/gallery-5.jpg" alt="Chasse sous-marine en apnée" loading="lazy"></div>
-    <div class="gallery__tile" data-reveal><img src="images/gallery-6.jpg" alt="Chasse sous-marine en apnée" loading="lazy"></div>
-    <div class="gallery__tile" data-reveal><img src="images/gallery-7.jpg" alt="Chasse sous-marine en apnée" loading="lazy"></div>
+  <div class="gallery__grid" id="galleryGrid">
+    <button class="gallery__tile gallery__tile--wide gallery__tile--tall" data-reveal data-full="images/gallery-3.jpg"><img src="images/gallery-3.jpg" alt="Prise d'un bar en apnée, Underwater Hunting" loading="lazy"></button>
+    <button class="gallery__tile" data-reveal data-full="images/gallery-1.jpg"><img src="images/gallery-1.jpg" alt="Immersion dans les profondeurs troubles de l'Atlantique" loading="lazy"></button>
+    <button class="gallery__tile" data-reveal data-full="images/gallery-4.jpg"><img src="images/gallery-4.jpg" alt="Vue en apnée sur un banc de poissons, fusil en joue" loading="lazy"></button>
+    <button class="gallery__tile gallery__tile--wide" data-reveal data-full="images/gallery-7.jpg"><img src="images/gallery-7.jpg" alt="Prise remontée à la surface, entre ciel et mer" loading="lazy"></button>
+    <button class="gallery__tile" data-reveal data-full="images/gallery-6.jpg"><img src="images/gallery-6.jpg" alt="Exploration d'un fond rocheux couvert d'algues" loading="lazy"></button>
+    <button class="gallery__tile" data-reveal data-full="images/gallery-2.jpg"><img src="images/gallery-2.jpg" alt="Retour de chasse au coucher du soleil" loading="lazy"></button>
   </div>
 </section>
 
@@ -156,7 +157,7 @@
 <section class="instagram" id="instagram">
   <div class="instagram__inner" data-reveal>
     <img src="images/profile.jpg" alt="Photo de profil under_water_hunting" class="instagram__avatar">
-    <h2 class="section-title">@under_water_hunting</h2>
+    <h2 class="display-title">@under_water_hunting</h2>
     <p>Suivez le quotidien de la chasse — sorties, prises, mer et apnée — au jour le jour sur Instagram.</p>
     <a href="https://www.instagram.com/under_water_hunting/" target="_blank" rel="noopener" class="btn btn--primary">Suivre sur Instagram</a>
   </div>
@@ -166,7 +167,7 @@
 <footer class="footer" id="contact">
   <div class="footer__inner">
     <div class="footer__brand">
-      <p class="nav__logo">UNDERWATER <span>HUNTING</span></p>
+      <p class="wordmark"><em>Underwater</em><b>HUNTING</b></p>
       <p>Chasse sous-marine en apnée · Bretagne, Atlantique</p>
     </div>
     <div class="footer__social">
@@ -177,6 +178,14 @@
   </div>
   <p class="footer__copy">© <span id="year"></span> Underwater Hunting. Chassez avec respect.</p>
 </footer>
+
+<!-- ===== LIGHTBOX GALERIE ===== -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Fermer">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Photo précédente">&#8249;</button>
+  <img src="" alt="" id="lightboxImg">
+  <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Photo suivante">&#8250;</button>
+</div>
 
 <!-- ===== SONDAGE D'ARRIVÉE ===== -->
 <div class="poll-overlay" id="pollOverlay">
